@@ -1,0 +1,410 @@
+/* 1. Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 2. Page Background */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #d13607;
+    padding: 30px 16px;
+    line-height: 1.5;
+}
+
+
+/* 3. Main Invoice Card */
+
+.invoice-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12);
+}
+
+
+/* 4. Company Header */
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+
+/* 5. Company Information */
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* 6. Logo */
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1673e6;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* 7. Company Name */
+
+.company-info h1 {
+    font-size: 28px;
+    color: #142c50;
+    margin-bottom: 2px;
+}
+
+.company-info p {
+    font-size: 13px;
+    color: #475569;
+}
+
+
+/* 8. Invoice Details */
+
+.invoice-info {
+    text-align: right;
+    min-width: 190px;
+}
+
+.invoice-info h2 {
+    color: #1557a6;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.invoice-info p {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+
+/* 9. Client Details */
+
+.client-section {
+    margin: 24px 0;
+}
+
+.client-section h3 {
+    color: #1557a6;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.client-section p {
+    font-size: 14px;
+    color: #334155;
+}
+
+
+/* 10. Table Wrapper */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* 11. Invoice Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+
+/* 12. Table Header */
+
+thead {
+    background-color: #104987;
+    color: #ffffff;
+}
+
+th {
+    padding: 12px 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+/* 13. Table Cells */
+
+td {
+    padding: 10px 14px;
+    border: 1px solid #dbe5f1;
+}
+
+
+/* 14. Alternate Row Background */
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+/* 15. Quantity and Rate Inputs */
+
+.quantity,
+.rate {
+    width: 100%;
+    min-width: 70px;
+    padding: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font: inherit;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+
+
+/* 16. Amount Column */
+
+.amount {
+    white-space: nowrap;
+}
+
+
+/* 17. Totals Section */
+
+.totals-section {
+    width: min(100%, 370px);
+    margin: 16px 0 0 auto;
+    padding: 12px 16px;
+    background-color: #eff6ff;
+    border-radius: 8px;
+}
+
+
+/* 18. Total Rows */
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    font-weight: 600;
+}
+
+
+/* 19. Grand Total */
+
+.grand-total {
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #1557a6;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+
+/* 20. Print Button Container */
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+
+/* 21. Print Button */
+
+#print-button {
+    border: none;
+    background-color: #1673e6;
+    color: #ffffff;
+    padding: 13px 28px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* 22. Button Hover Effect */
+
+#print-button:hover {
+    background-color: #0e5cc0;
+}
+
+
+/* 23. Tablet and Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .invoice-container {
+        padding: 18px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .company-info {
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        width: 60px;
+        height: 60px;
+        font-size: 23px;
+    }
+
+    .company-info h1 {
+        font-size: 22px;
+    }
+
+    .invoice-info {
+        text-align: left;
+        min-width: 0;
+    }
+
+    .invoice-info h2 {
+        font-size: 25px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    .totals-section {
+        width: 100%;
+    }
+
+    .button-container {
+        justify-content: stretch;
+    }
+
+    #print-button {
+        width: 100%;
+    }
+}
+
+
+/* 24. Print Styling */
+
+@media print {
+
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+    .invoice-container {
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .table-wrapper {
+        overflow: visible;
+    }
+
+    table {
+        min-width: 0;
+    }
+
+    #print-button {
+        display: none;
+    }
+
+}
+
+/* 25. Client Information + GST Settings Layout */
+
+.client-tax-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 24px 0;
+}
+
+.client-tax-row .client-section {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+/* GST Dropdown Settings */
+
+.tax-settings {
+    width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tax-settings .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.tax-settings label {
+    color: #1557a6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tax-settings select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #334155;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tax-settings select:focus {
+    outline: none;
+    border-color: #1673e6;
+}
+
+/* Mobile Responsive Layout */
+
+@media (max-width: 768px) {
+    .client-tax-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .tax-settings {
+        width: 100%;
+    }
+}
